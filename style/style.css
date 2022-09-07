@@ -1,0 +1,244 @@
+/* .card__description { */
+
+        /* en sentido de agujas del reloj */
+    /* margin: 10px 20px 30px 40px; */
+    
+    /* margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px; */
+    
+    /* padding: 20p;
+
+    border: 5px dotted black;
+
+    width: 150;
+    height: 150; */
+/* } */
+
+/* .card__link { */
+
+    /* display: block;
+    display: none; */
+
+    /* display: inline;
+    margin-right: 100px; */
+
+    /* display: block;
+    width: 150px;
+    height: 150px;
+    background-color: grey;
+    color: beige;
+    margin-top: 100px;
+    overflow: auto; */
+
+    /* position: absolute;
+    top: 0;
+    right: 0; */
+
+/* } */
+/* 
+.card { 
+    position: relative;
+} */
+
+*{
+    margin: o;
+    padding: 0;
+                    /* LA CAJA SIEMPRE MIDE 100PX */
+    box-sizing: border-box;
+}
+
+.header{
+    position: sticky;
+    top: 0;
+    background-color: rgb(110, 55, 9);
+    padding: 30px 20px;
+
+    /* para ordenar los elementos que se superponen */
+    z-index: 1;
+
+}
+
+.header__content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.header__content-title{
+    color: aquamarine;
+}
+
+.header__content-title:hover::after {
+    content: "Inicio";
+    color: orange;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.header__content-navbar{
+    display: flex;
+    align-items: center;
+    
+}
+
+.header__content-navbar a:hover {
+    color:blue
+}
+
+
+
+.header__content-navbar a{
+    margin: 0 15px;
+    color: aquamarine;
+    font-weight: bolds;
+    transition: color 0.3s;   
+    
+}
+
+.header__content-navbar li {
+    transition: transform 0.3ms;
+}
+
+.header__content-navbar li:last-child {
+    border: 1px solid blueviolet;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.header__content-navbar li:active {
+    transform: scale(0.9);
+}
+
+body{
+    background-color: #eee;
+    
+    font-family: 'EB Garamond', serif;
+
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+        /* SACO SUBRAYADO DE LINKS */
+a{
+    text-decoration: none;
+}
+        /* ME DA MEJOR VISIBILIDAD AL LEER */
+p{
+    line-height: 1.5;
+}
+        /* ELIMINO VIÑETAS DETOLAS LAS LISTAS */
+ul{
+    list-style-type: none;
+}
+
+.whatsapp { 
+    /* viewpoint */
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+}
+
+
+.card{
+    background-color: white;
+    padding: 20px;
+    /* width: 300px; */
+    border-radius: 10px;
+
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 60%);
+    
+    transition: transfrom 0.5s;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+}
+
+.card__title{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.card__description{
+    margin-bottom: 40px;
+}
+
+.card__link{
+    background-color: rgb(123, 209, 123);
+
+            /*  OJO, AGEGO LINE-BLOCK */
+    display: inline-block;
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+
+            /* CURSOR  MANITO*/
+    cursor: pointer;
+
+    font-weight: bold;
+    font-size: 16px;
+
+    transition: all 0.3s;
+    position: relative;
+}
+
+.card__link:hover {
+    background-color: rgb(19, 112, 58);
+}
+
+.card__link:hover::after {
+    content: "\00AE";
+    position: absolute;
+    right: 20px;
+}
+
+.card__header-img{
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.card__header{
+    position: relative;
+}
+
+.card__header-tag{
+    padding: 8px;
+    color: brown;
+    background-color: rgba(255, 255, 255, 50%);
+
+    /* para poder usarlo su contenedor padre tiene que tener positio:relaite; */
+    position: absolute;
+    right: 0;
+
+    /* todo esto para redondear los lados izq y abajo */
+    border-bottom-left-radius: 10px;
+}
+
+.courses {
+    margin-top: 60px;
+    padding: 0 20px;
+}
+
+.courses__title {
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 30px;
+} 
+
+.courses__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+
+    /* evito que se estire mucho si a pantallae s muy grande */
+    max-width: 1000px;
+    margin: 0 auto;
+}
